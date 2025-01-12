@@ -1,0 +1,122 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "HE脚本"; Text ="载入中"; Duration = 2; })wait("3")
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "HE脚本"; Text ="师傅是靓坤"; Duration = 2; })wait("2")
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "HE脚本"; Text ="载入成功"; Duration = 3; })
+
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("现在时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/xcmsnd/DrRay-UI-Library/refs/heads/main/61%E7%A0%81.txt"))();		
+local win = ui:new("HE脚本")
+--
+local UITab1 = win:Tab("信息",'16060333448')
+
+local about = UITab1:section("作者信息",false)
+
+about:Label("HE脚本")
+about:Label("作者：HE")
+about:Label("师傅是靓坤---改版")
+
+local about = UITab1:section("你的信息",false)
+
+about:Label("你的账号:"..player.AccountAge.."世纪")
+about:Label("你的注入器:"..identifyexecutor())
+about:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
+about:Label("服务器名称:"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『JM』"; Text ="作者:丁丁"; Duration = 10; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『感谢』"; Text ="du8"; Duration = 5; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『感谢』"; Text ="123fa98"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『JM』"; Text ="lishichuan"; Duration = 2; })
+
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/hun/main/jmlibrary1.lua"))();        
+local win = ui:new("JM")
+--
+local UITab355 = win:Tab("『传送』",'7734068321')
+
+local about = UITab355:section("『111』",true)
+
+about:Button("营地1", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3675.547607421875, 228.99801635742188, 218.94447326660156)
+end)
+
+about:Button("汽车制造点", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2282.958251953125, 100.99801635742188, -62.833335876464844)
+end)
+
+about:Button("营地2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1797.17822265625, 104.79232025146484, -123.54420471191406)
+end)
+
+about:Button("攀冰处", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3197.6259765625, 848.4337158203125, -51.407386779785156)
+end)
+
+about:Button("营地3", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5921.45703125, 320.99798583984375, -11.849882125854492)
+end)
+
+about:Button("营地4", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8973.5390625, 596.2758178710938, 102.99405670166016)
+end)
+
+about:Button("南极点", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10940.6982421875, 548.9979858398438, 16.84609031677246)
+end)
+
+about:Button("改变大小", function()
+game.Workspace.Locally_Imported_Parts.WaterRefill_Basecamp.Size = Vector3.new(9999,9999,9999,9999)
+end)
+local UITab3 = win:Tab("通用",'16060333448')
+
+local about = UITab3:section("通用",true)
+
+about:Button("甩人",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+end)
+    
+about:Button("替身",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+end)
+
+about:Button("爬墙",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+end)
+
+about:Button("汉化阿尔宙斯自瞄",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/sgbs/main/%E4%B8%81%E4%B8%81%20%E6%B1%89%E5%8C%96%E8%87%AA%E7%9E%84.txt"))()
+end)
+
+about:Button("工具挂",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/StandAwekening.lua"))()
+end)
+
+about:Button("甩飞",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/hknvh/main/%E7%94%A9%E9%A3%9E.txt"))()
+end)
+
+about:Button("铁拳",function()
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
+end)
+
+about:Slider('设置重力', 'Sliderflag', 196.2, 196.2, 1000,false, function(Value)
+        game.Workspace.Gravity = Value
+    end)
+    
+    about:Slider("跳跃高度!", "JumpPower", game.Players.LocalPlayer.Character.Humanoid.JumpPower, 50, 400, false, function(Jump)
+  spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jump end end)
+end)
+
+about:Slider("步行速度!", "WalkSpeed", game.Players.LocalPlayer.Character.Humanoid.WalkSpeed, 16, 400, false, function(Speed)
+  spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed end end)
+end)
